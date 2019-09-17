@@ -135,3 +135,8 @@ FULL OUTER JOIN end_time_at_minus_one as b
     USING (course_offering_id)
 WHERE a.course_offering_id IS NULL
     OR b.course_offering_id IS NULL ;
+
+SELECT COUNT(*)
+FROM all_morning_classes
+SEMI JOIN all_afternoon_classes USING (uuid);
+GROUP BY uuid;
