@@ -29,7 +29,8 @@ sections table
 SELECT * 
 FROM sections.columns
 
-
+Return all the course names, course numbers, term codes, course offering names (in case different
+from course names), 
 SELECT c.name as course__name, c.number, 
     co.term_code, co.name as course_offering_name, 
     sections.section_type, 
